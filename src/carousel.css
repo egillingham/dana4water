@@ -5,7 +5,31 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: #333333;
+}
+
+a:link {
+  color: #1D7A96;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #14576C;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1D7A96;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #1D7A96;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 /* CUSTOMIZE THE NAV BAR
@@ -29,12 +53,44 @@ body {
   color: #ffffff;
 }
 
+/* Mobile version */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-custom .navbar-toggle {
+  border-color: #DDD;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #DDD;
+}
+.navbar-custom .navbar-toggle .icon-bar .navbar-toggler-icon {
+  background-color: #CCC;
+}
+@media (max-width: 767px) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+  }
+}
+
 /* other stuff */
 
 .main-h1 {
-  font-size: 6rem;
+  font-size: 4rem;
   color: #1D7A96;
-  text-decoration: underline #96761D
+  text-decoration: underline #96761D;
+}
+
+.main-h2 {
+  color: #181C37;
+  background-color: #e1eaed73;
+  max-width: 50%;
+  display: none;
 }
 
 .main-line {
@@ -72,6 +128,17 @@ body {
   height: 32rem;
 }
 
+/* Declare heights because of positioning of img element */
+.carousel-item-small {
+  height: 12rem;
+}
+.carousel-item-small > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
 
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -102,10 +169,15 @@ body {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
+  margin-top: 1.5rem;
 }
 
 .featurette-main-lead {
   font-size: 1.5rem;
+}
+
+.featurette-image-small {
+  max-width: 200px;
 }
 
 
@@ -120,8 +192,12 @@ body {
     line-height: 1.4;
   }
 
-  .featurette-heading {
-    font-size: 50px;
+  .main-h1 {
+    font-size: 6rem;
+  }
+
+  .main-h2 {
+    display: block;
   }
 }
 
